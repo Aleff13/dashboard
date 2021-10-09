@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="icones/sale.png" type="image/x-icon">
+    
+</head>
+<body>
+    <div class="principal">
+        <div class="up"></div>
+        <div class="display" id="display">
+            <img src="" id="display_icon" alt="">
+            <span id="display_txt"></span>
+        </div>
+        <div class="action" id="action" onclick="lat1_click()">
+            <img src="icones/new.png" alt="">
+            Register new 
+        </div>
+        <div class="view" id="view" onclick="vcliccust()">
+            <img src="icones/oclinho.png" alt="">
+            View current
+        </div>
+        <span id="help_left"><div id="help_icon">?</div></span>
+        
+        <span id="help_right"><div id="help_icon">?</div></span>
+        
+    </div>
+    <div class="side">
+        
+        <span class="lat1" id="lat1" onclick="customerss()">
+            
+            <span>
+                <img src="icones/clientes.png" id="customer_icon" alt="">
+            </span>
+            <p>
+                Customer
+            </p>
+        </span>
+        <span class="lat2" id="lat2" onclick="lat2_click()">
+            <span>
+                <img src="icones/sale.png" id="sale_icon" alt="">
+            </span>
+            <p>
+                Sell
+            </p>
+        </span>
+        <span class="lat3" id="lat3" onclick="lat3_click()">
+            <span>
+                <img src="icones/empregados.png" id='employer_icon' alt="">
+            </span>
+            <p>Employer</p>
+        </span>
+        <span class="lat4" id="lat4" onclick="lat4_click()">
+            <span>
+                <img src="icones/caixa.png" id="store_icon" alt="">
+            </span>
+            <p>Store</p>
+        </span>
+
+
+
+    </div>
+    <script src="jquery/jquery.js"></script>
+    <script src="main.js"></script>
+    <script src="index.php"></script>
+    
+</body>
+</html>
