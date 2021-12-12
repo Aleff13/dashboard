@@ -8,7 +8,14 @@
     left: 0px;
     top: 0px;
 
-    background: #C4C4C4;
+    background: #f53030;
+}
+html{
+    background: rgb(31,58,189);
+background: -moz-linear-gradient(41deg, rgba(31,58,189,1) 31%, rgba(245,48,48,1) 75%);
+background: -webkit-linear-gradient(41deg, rgba(31,58,189,1) 31%, rgba(245,48,48,1) 75%);
+background: linear-gradient(41deg, rgba(31,58,189,1) 31%, rgba(245,48,48,1) 75%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f3abd",endColorstr="#f53030",GradientType=1);
 }
 .side{
     /* Rectangle 2 */
@@ -20,7 +27,11 @@
     left: 0px;
     top: 0px;
 
-    background: #111111;
+    background: rgb(31,58,189);
+background: -moz-linear-gradient(41deg, rgba(31,58,189,1) 31%, rgba(245,48,48,1) 75%);
+background: -webkit-linear-gradient(41deg, rgba(31,58,189,1) 31%, rgba(245,48,48,1) 75%);
+background: linear-gradient(41deg, rgba(31,58,189,1) 31%, rgba(245,48,48,1) 75%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f3abd",endColorstr="#f53030",GradientType=1);
 }
 .lat1{
     position: absolute;
@@ -28,8 +39,8 @@
     height: 10%;
     left: 15%;
     top: 20%;
-
-    background: #C4C4C4;
+    
+    background: #ffffff2c;
     border-radius: 42px;
 
 }
@@ -40,7 +51,8 @@
     left: 15%;
     top: 40%;
 
-    background: #C4C4C4;
+       background: #ffffff2c;
+
     border-radius: 42px;
 
 }
@@ -51,7 +63,8 @@
     left: 15%;
     top: 60%;
 
-    background: #C4C4C4;
+       background: #ffffff2c;
+
     border-radius: 42px;
 
 }
@@ -62,7 +75,8 @@
     left: 15%;
     top: 80%;
 
-    background: #C4C4C4;
+       background: #ffffff2c;
+
     border-radius: 42px;
 
 }
@@ -73,7 +87,7 @@
     left: 35%;
     top: 30%;
 
-    background: #C4C4C4;
+    background: #ffffff2c;
     border-radius: 100px;
 }
 .action{
@@ -83,7 +97,7 @@
     left: 35%;
     top: 70%;
 
-    background: #C4C4C4;
+    background: #ffffff2c;
     border-radius: 45px;
 
 }
@@ -94,32 +108,32 @@
     left: 65%;
     top: 70%;
 
-    background: #C4C4C4;
+    background: #ffffff2c;
     border-radius: 45px;
 
 }
 .action:hover{
-    background-color: #949494;
+    background-color: #f530309c;
     transition: all 0.5s;
 }
 .view:hover{
-    background-color: #949494;
+    background-color: rgba(31, 57, 189, 0.521);
     transition: all 0.5s;
 }
 .lat1:hover{
-    background-color: #949494;
+    background-color: white;
     transition: all 0.5s;
 }
 .lat2:hover{
-    background-color: #949494;
+    background-color: white;
     transition: all 0.5s;
 }
 .lat3:hover{
-    background-color: #949494;
+    background-color: white;
     transition: all 0.5s;
 }
 .lat4:hover{
-    background-color: #949494;
+    background-color: white;
     transition: all 0.5s;
 }
 Body{
@@ -129,7 +143,7 @@ Body{
     font-size: 140%;
     line-height: 60%;
     
-    color: #4b4a4a;
+    color: #000000;
 }
 p{
     
@@ -222,6 +236,7 @@ img{
 #customer_icon{
     width: 15%;
     position: absolute;
+    left: 10%;
 
 }
 #employer_icon{
@@ -235,7 +250,7 @@ img{
     margin-left: 30%;
     margin-right: 20%;
     line-height: 100%;
-    left: 30%;
+    left: 0%;
 }
 #store_icon{
     width: 15%;
@@ -254,5 +269,62 @@ img{
     width: 15%;
     margin-bottom: 15%;
 }
+#name{
+    border-radius: 15px;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.425);
+}
+#age{
+    border-radius: 15px;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.425);
+}
+#send{
+    border-radius: 15px;
+    width: 50%;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.425);
+}
 
+#name:hover{
+    border-radius: 15px;
+    
+    background-color: rgba(255, 255, 255, 0.719);
+    transition: all 1s;
+}
+#age:hover{
+    border-radius: 15px;
+    
+    background-color: rgba(250, 250, 250, 0.884);
+    transition: all 1s;
+}
+#send:hover{
+    border-radius: 15px;
+        background-color: rgba(75, 105, 240, 0.479);
+
+transition: all 1s;}
+
+
+#lat1 {background-image: linear-gradient(to right, #DC2424 0%, #4A569D  51%, #DC2424  100%)}
+#lat1 {
+   
+   width: 60%;
+   height: 10%;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: rgb(29, 29, 29);            
+   box-shadow: 0 0 20px rgb(0, 0, 0);
+   border-radius: 45px;
+   display: block;
+ }
+
+ #lat1:hover {
+   background-position: right center; /* change the direction of the change here */
+   
+   text-decoration: none;
+ }
 
