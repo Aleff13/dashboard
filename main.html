@@ -15,15 +15,44 @@
         <div class="display" id="display">
             <img src="" id="display_icon" alt="">
             <span id="display_txt">
-                <form action="">
+                <form action="" id="form_customer">
                     
-                        <input type="text" name="" id="name" placeholder="Name">
-                        <input type="text" name="" id="age" placeholder="Age">
-                        <input type="button" value="Enviar" id="send">
+                    <input type="text" name="" id="name" placeholder="Name">
+                    <input type="text" name="" id="age" placeholder="Age">
+                    <input type="button" value="Enviar" id="send">
+                            
+                </form>
+                <form action="" id="form_prod">
                     
+                    <input type="text" name="" id="name" placeholder="Name">
+                    <input type="text" name="" id="age" placeholder="price">
+                    <input type="button" value="Enviar" id="send">
+                        
+                </form>
+                <form action="" id="form_employer">
+                    <h1></h1>
+                    <input type="text" name="" id="name" placeholder="Name">
+                    <input type="text" name="" id="age" placeholder="function">
+                    <input type="button" value="Enviar" id="send">
                     
                 </form>
+                <form action="" id="form_store">
+                    
+                    <input type="text" name="" id="name" placeholder="Name">
+                    <input type="text" name="" id="age" placeholder="Quantity">
+                    <input type="button" value="Enviar" id="send">
+                
+                </form>
+
+                <div id="content">
+                    <form action="">
+                        <input type="text" placeholder="Digite o id" id="content_id">
+                        <input type="button" value="Buscar!" id="btn_get">
+                    </form>
+                </div>
+                <div id="outout"></div>
             </span>
+            
         </div>
         <div class="action" id="action" >
             <img src="icones/new.png" alt="">
@@ -49,7 +78,7 @@
                 Customer
             </p>
         </span>
-        <span class="lat2" id="lat2" onclick="lat2_click()">
+        <span class="lat2" id="lat2" >
             <span>
                 <img src="icones/sale.png" id="sale_icon" alt="">
             </span>
@@ -57,13 +86,13 @@
                 Sell
             </p>
         </span>
-        <span class="lat3" id="lat3" onclick="lat3_click()">
+        <span class="lat3" id="lat3" >
             <span>
-                <img src="icones/empregados.png" id='employer_icon' alt="">
+                <img src="icones/empregados.png" id='employer_icon' alt="" value=>
             </span>
             <p>Employer</p>
         </span>
-        <span class="lat4" id="lat4" onclick="lat4_click()">
+        <span class="lat4" id="lat4">
             <span>
                 <img src="icones/caixa.png" id="store_icon" alt="">
             </span>
