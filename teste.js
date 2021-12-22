@@ -3,6 +3,7 @@ function get(option){
     var index = window.document.getElementById("content_id").value
         //fetch api
 
+        //implementar tamanho da lista para exibir quantidade de clientes
 
         //requisição que faz o get, ela pode ser melhorada para usar post e etc
         
@@ -17,8 +18,8 @@ function get(option){
             })
             //encadeando 
             .then(function(Customers){
-                console.log(Customers[index].Name)
-                out.textContent= Customers[index].Name +" " +Customers[index].Age
+                alert(Customers[index].Name + " "+Customers[index].Age)
+                // out.textContent= Customers[index].Name +" " +Customers[index].Age
                 return information.json();
             })
         
@@ -27,34 +28,58 @@ function get(option){
     
     }
 
-    function post(option){
+    function post(option, Name, Age){
         //catar os valores dos campos em um array e transformar em json
-        let inname = window.document.getElementById("name")
-        let inage = window.document.getElementById("age")
+        
 
-        //valores
-        let name = inname.value
-        let age = inage.value
-
-        var obj = {
-            "Id": "1",
-            "Name": "vim pelo dash",
-            "Age": "21",
-            "Address" : "88045680",
-            "Type": "stage"
+        var customer = {
+            "Name": name, 
+            "Age": age
         }
+                
+        
 
         fetch('http://localhost:21262/add/'+option, {
         method: "POST",
-        body: JSON.stringify({
-            obj
-        }),
+        body: JSON.stringify({Name, Age}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
           },
     });
 
     
+}
+
+function get_name(){
+    var inname = window.document.getElementById("name")
+    
+
+    //valores
+    var name = inname.value
+    
+
+    if (name ==""){
+        inname.focus()
+        alert("n")
+    }
+    
+    return name
+}
+
+function get_age(){
+    
+    var inage = window.document.getElementById("age")
+
+    //valores
+    
+    var age = inage.value
+
+    if (age==""){
+        inage.focus()
+        alert("n")
+    }
+    
+    return age;
 }
 
 
@@ -84,34 +109,42 @@ var lat3 = window.document.getElementById("lat3")
 var lat4 = window.document.getElementById("lat4")
 
 var btn_get = window.document.getElementById("btn_get")
+var btn_send = window.document.getElementById("send")
 
-
-lat1.addEventListener("click", function icons() {
+var option = lat1.addEventListener("click", function icons() {
     icon_display.setAttribute('src', "icones/clientes.png");
-    var option = "customer"
+    
 
     //ocultando os outros forms
     form_employer.style.display="none"
     form_store.style.display="none"
     form_prod.style.display="none"
 
-    btn_post.addEventListener("click", function(){
-        form_customer.style.display='flex'
-        form_id.style.display="none"
-        post(option)
-        
-    },false)
-    btn_view.addEventListener("click", function(){
-        form_id.style.display="flex"
-        form_customer.style.display="none"
-        btn_get.addEventListener("click", function() {
-            
-            get(option);
-            return;
-        })
-    }, false)
-    
+    return option = "customer"
 })
+btn_post.addEventListener("click", function(){
+    form_customer.style.display='flex'
+    form_id.style.display="none"
+     })
+btn_send.addEventListener("click", function(){
+    var name = get_name()
+    var age = get_age()
+    post(option, name, age)
+    })
+        
+
+btn_view.addEventListener("click", function(){
+    form_id.style.display="flex"
+    form_customer.style.display="none"})
+
+btn_get.addEventListener("click", function() {
+            
+    get(option);
+        return;
+})
+    
+    
+
 lat2.addEventListener("click", function icons() {
     icon_display.setAttribute("src", "icones/sale.png");
     var option = "sell"
@@ -148,4 +181,7 @@ lat4.addEventListener("click", function icons() {
         })
     }, false)
 })
-cust.addEventListener("click", post)
+
+//mudar o out para não perder o negocio do id
+
+
